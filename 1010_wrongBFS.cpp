@@ -4,11 +4,11 @@ int map[8][8];
 char cmap[8][8];
 int N,M,T;
 int BFS(int x,int y,int value){
-    if(x<0 || y <0 || x>6 || y >6)
+    if(x<0 || y <0 || x>6 || y >6)//超范围直接退出
         return 0;
-    if(cmap[x][y] == 'X')
+    if(cmap[x][y] == 'X') //遇到墙直接退出
         return 0;
-    if(value+1 > T+1)
+    if(value+1 > T+1) //超时直接退出
         return 0;
     if(map[x][y]==0 || map[x][y]>(value+1))
     {        
